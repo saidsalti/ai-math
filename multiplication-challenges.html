@@ -5,31 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تحديات جدول الضرب - مفاهيم الرياضيات</title>
     
-    <!-- P5.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
-    
-    <!-- Your stylesheet -->
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/challenges.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
+    
+    <!-- Master Page System -->
+    <script src="js/master-page.js"></script>
 </head>
 <body>
-    <header>
-        <h1>تحديات جدول الضرب</h1>
-    </header>
+ 
     
-    <nav>
-        <ul>
-            <li><a href="index.html">الصفحة الرئيسية</a></li>
-            <li><a href="circle.html">دائرة الوحدة والمثلثات</a></li>
-            <li><a href="parabola.html">المنحنى القطعي (الباربولا)</a></li>
-            <li><a href="fibonacci.html">متتالية فيبوناتشي</a></li>
-            <li><a href="pythagoras.html">نظرية فيثاغورس</a></li>
-            <li><a href="multiplication-game.html">لعبة جدول الضرب</a></li>
-            <li><a href="multiplication-challenges.html" class="active">تحديات الضرب</a></li>
-        </ul>
-    </nav>
+   
     
     <main>
         <div class="content rtl-container">
@@ -210,12 +201,20 @@
         <p>تم إنشاؤه باستخدام <a href="#" target="_blank">سعيد الصلتي</a></p>
     </footer>
 
-    <!-- Challenge system script -->
+    <!-- Challenge system scripts -->
     <script src="js/challenge-system.js"></script>
-    <!-- Individual challenge scripts -->
+    <script src="js/challenge-sounds.js"></script>
+    <script src="js/challenge-animations.js"></script>
     <script src="js/challenge-time-attack.js"></script>
     <script src="js/challenge-target-number.js"></script>
     <script src="js/challenge-falling-numbers.js"></script>
     <script src="js/challenge-pattern-matching.js"></script>
+    
+    <!-- Initialize Master Page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            MasterPage.init('challenges');
+        });
+    </script>
 </body>
 </html>

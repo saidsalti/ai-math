@@ -5,30 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>متتالية فيبوناتشي - مفاهيم الرياضيات</title>
     
-    <!-- P5.js library -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
     
-    <!-- Your stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Master Page System -->
+    <script src="js/master-page.js"></script>
 </head>
 <body>
-    <header>
-        <h1>متتالية فيبوناتشي</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">الصفحة الرئيسية</a></li>
-            <li><a href="circle.html">دائرة الوحدة والمثلثات</a></li>
-            <li><a href="parabola.html">المنحنى القطعي (الباربولا)</a></li>
-            <li><a href="fibonacci.html" class="active">متتالية فيبوناتشي</a></li>
-            <li><a href="pythagoras.html">نظرية فيثاغورس</a></li>
-        </ul>
-    </nav>
-    
     <main>
         <div class="content rtl-container">
-            <h2>استكشاف متتالية فيبوناتشي والنسبة الذهبية</h2>
+            <h2>متتالية فيبوناتشي والنسبة الذهبية</h2>
             
             <div class="explanation">
                 <p>متتالية فيبوناتشي هي سلسلة من الأرقام حيث كل رقم هو مجموع الرقمين السابقين: 1, 1, 2, 3, 5, 8, 13, 21, ...</p>
@@ -46,12 +35,15 @@
             </div>
         </div>
     </main>
-    
-    <footer>
-        <p>تم إنشاؤه باستخدام <a href="#" target="_blank">سعيد الصلتي</a></p>
-    </footer>
 
-    <!-- Fibonacci concept specific script -->
+    <!-- Fibonacci specific script -->
     <script src="js/fibonacci.js"></script>
+    
+    <!-- Initialize Master Page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            MasterPage.init('fibonacci');
+        });
+    </script>
 </body>
 </html>

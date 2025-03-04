@@ -1,48 +1,24 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مفاهيم الرياضيات مع P5.js</title>
     
-    <!-- P5.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
-    
-    <!-- Your stylesheet -->
+    <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Add sound and animation scripts before the challenge system -->
-    <script src="js/challenge-sounds.js"></script>
-    <script src="js/challenge-animations.js"></script>
-    <script src="js/challenge-system.js"></script>
     
-    <!-- Individual challenge scripts -->
-    <script src="js/challenge-time-attack.js"></script>
-    <script src="js/challenge-target-number.js"></script>
-    <script src="js/challenge-falling-numbers.js"></script>
-    <script src="js/challenge-pattern-matching.js"></script>
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    
+    <!-- Master Page System -->
+    <script src="js/master-page.js"></script>
 </head>
 <body>
-    <header>
-        <h1>مفاهيم الرياضيات التفاعلية</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">الصفحة الرئيسية</a></li>
-            <li><a href="circle.html">دائرة الوحدة والمثلثات</a></li>
-            <li><a href="parabola.html">المنحنى القطعي (الباربولا)</a></li>
-            <li><a href="fibonacci.html">متتالية فيبوناتشي</a></li>
-            <li><a href="pythagoras.html">نظرية فيثاغورس</a></li>
-        </ul>
-    </nav>
-    
     <main>
         <div class="content">
-            <h2>اكتشف الرياضيات بشكل تفاعلي</h2>
-            
-            <!-- Add Featured Content Section -->
+            <!-- Featured Content Section -->
             <div class="featured-content">
                 <h3>الدروس المميزة</h3>
                 <div class="featured-grid">
@@ -89,7 +65,7 @@
                 </div>
             </div>
 
-            <!-- Existing concept grid -->
+            <!-- Concept Grid -->
             <h3>جميع المفاهيم</h3>
             <div class="concept-grid">
                 <div class="concept-card">
@@ -118,9 +94,12 @@
             </div>
         </div>
     </main>
-    
-    <footer>
-        <p>تم إنشاؤه باستخدام <a href="#" target="_blank">سعيد الصلتي</a></p>
-    </footer>
+
+    <!-- Initialize Master Page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            MasterPage.init('home');
+        });
+    </script>
 </body>
 </html>

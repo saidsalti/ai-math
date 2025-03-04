@@ -5,30 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>المنحنى القطعي (الباربولا) - مفاهيم الرياضيات</title>
     
-    <!-- P5.js library -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
     
-    <!-- Your stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Master Page System -->
+    <script src="js/master-page.js"></script>
 </head>
 <body>
-    <header>
-        <h1>المنحنى القطعي (الباربولا)</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">الصفحة الرئيسية</a></li>
-            <li><a href="circle.html">دائرة الوحدة والمثلثات</a></li>
-            <li><a href="parabola.html" class="active">المنحنى القطعي (الباربولا)</a></li>
-            <li><a href="fibonacci.html">متتالية فيبوناتشي</a></li>
-            <li><a href="pythagoras.html">نظرية فيثاغورس</a></li>
-        </ul>
-    </nav>
-    
     <main>
         <div class="content rtl-container">
-            <h2>استكشاف المنحنى القطعي (الباربولا)</h2>
+            <h2>المنحنى القطعي (الباربولا)</h2>
             
             <div class="explanation">
                 <p>الباربولا هو منحنى قطعي يمثل المعادلة y = ax² + bx + c. استخدم شريط التمرير أدناه لتغيير قيمة a وb وc ومشاهدة التأثير على شكل المنحنى.</p>
@@ -54,12 +43,15 @@
             </div>
         </div>
     </main>
-    
-    <footer>
-        <p>تم إنشاؤه باستخدام <a href="#" target="_blank">سعيد الصلتي</a></p>
-    </footer>
 
-    <!-- Parabola concept specific script -->
+    <!-- Parabola specific script -->
     <script src="js/parabola.js"></script>
+    
+    <!-- Initialize Master Page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            MasterPage.init('parabola');
+        });
+    </script>
 </body>
 </html>
