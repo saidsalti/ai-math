@@ -1,0 +1,138 @@
+/* Styling for the multiplication game */
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f8ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.game-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.game-question {
+  font-size: 2.5rem;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.number {
+  color: #1e88e5;
+  font-weight: bold;
+}
+
+.operator {
+  color: #ff5722;
+  padding: 0 5px;
+}
+
+.question-mark {
+  color: #4caf50;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.game-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.option-btn {
+  padding: 15px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #bbdefb;
+  color: #1565c0;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.option-btn:hover {
+  background-color: #90caf9;
+  transform: translateY(-3px);
+}
+
+.option-btn.correct {
+  background-color: #a5d6a7;
+  color: #2e7d32;
+}
+
+.option-btn.incorrect {
+  background-color: #ef9a9a;
+  color: #c62828;
+}
+
+.game-score {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.game-btn {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+.game-btn:hover {
+  background-color: #1565c0;
+}
+
+#next-btn {
+  background-color: #43a047;
+}
+
+#next-btn:hover {
+  background-color: #2e7d32;
+}
+
+#reset-btn {
+  background-color: #f57c00;
+}
+
+#reset-btn:hover {
+  background-color: #ef6c00;
+}
+
+/* Add animation for correct answers */
+@keyframes celebrate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.celebrate {
+  animation: celebrate 0.5s ease;
+}

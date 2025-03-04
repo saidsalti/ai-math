@@ -9,7 +9,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
     
     <!-- Your stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Add sound and animation scripts before the challenge system -->
+    <script src="js/challenge-sounds.js"></script>
+    <script src="js/challenge-animations.js"></script>
+    <script src="js/challenge-system.js"></script>
+    
+    <!-- Individual challenge scripts -->
+    <script src="js/challenge-time-attack.js"></script>
+    <script src="js/challenge-target-number.js"></script>
+    <script src="js/challenge-falling-numbers.js"></script>
+    <script src="js/challenge-pattern-matching.js"></script>
 </head>
 <body>
     <header>
@@ -29,10 +41,56 @@
     <main>
         <div class="content">
             <h2>اكتشف الرياضيات بشكل تفاعلي</h2>
-            <p>مرحبا بك في عالم المفاهيم الرياضية التفاعلية! استكشف المفاهيم الرياضية الأساسية بطريقة بصرية وتفاعلية.</p>
             
-            <p>اختر أحد المفاهيم من القائمة أعلاه للبدء:</p>
-            
+            <!-- Add Featured Content Section -->
+            <div class="featured-content">
+                <h3>الدروس المميزة</h3>
+                <div class="featured-grid">
+                    <div class="featured-card recommended">
+                        <div class="card-badge">موصى به</div>
+                        <div class="featured-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4>تحديات جدول الضرب</h4>
+                        <p>العب وتعلم جدول الضرب من خلال تحديات ممتعة وتفاعلية</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-star"></i> الأكثر شعبية</span>
+                            <span><i class="fas fa-clock"></i> 15 دقيقة</span>
+                        </div>
+                        <a href="multiplication-challenges.html" class="featured-button">ابدأ التحدي</a>
+                    </div>
+
+                    <div class="featured-card">
+                        <div class="featured-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>العدد المستهدف</h4>
+                        <p>تدرب على مهارات الضرب للوصول إلى الأعداد المستهدفة</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-medal"></i> تحدي</span>
+                            <span><i class="fas fa-clock"></i> 10 دقائق</span>
+                        </div>
+                        <a href="multiplication-challenges.html#target-number" class="featured-button">جرب الآن</a>
+                    </div>
+
+                    <div class="featured-card recommended">
+                        <div class="card-badge">جديد</div>
+                        <div class="featured-icon">
+                            <i class="fas fa-meteor"></i>
+                        </div>
+                        <h4>الأرقام المتساقطة</h4>
+                        <p>اختبر سرعتك في حل عمليات الضرب مع الرسوم المتحركة</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-fire"></i> شيق</span>
+                            <span><i class="fas fa-clock"></i> 5 دقائق</span>
+                        </div>
+                        <a href="multiplication-challenges.html#falling-numbers" class="featured-button">العب الآن</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing concept grid -->
+            <h3>جميع المفاهيم</h3>
             <div class="concept-grid">
                 <div class="concept-card">
                     <h3>دائرة الوحدة والمثلثات</h3>

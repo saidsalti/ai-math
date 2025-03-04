@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحديات جدول الضرب - مفاهيم الرياضيات</title>
+    
+    <!-- P5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
+    
+    <!-- Your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/challenges.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>تحديات جدول الضرب</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="circle.html">دائرة الوحدة والمثلثات</a></li>
+            <li><a href="parabola.html">المنحنى القطعي (الباربولا)</a></li>
+            <li><a href="fibonacci.html">متتالية فيبوناتشي</a></li>
+            <li><a href="pythagoras.html">نظرية فيثاغورس</a></li>
+            <li><a href="multiplication-game.html">لعبة جدول الضرب</a></li>
+            <li><a href="multiplication-challenges.html" class="active">تحديات الضرب</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="content rtl-container">
+            <h2>تحديات جدول الضرب التفاعلية</h2>
+            
+            <div id="welcome-screen" class="screen">
+                <div class="explanation">
+                    <p>أهلاً بك في تحديات جدول الضرب! هنا يمكنك اختبار مهاراتك في الضرب بأشكال مختلفة.</p>
+                    <p>اختر نوع التحدي المناسب لك واستمتع بالتعلم!</p>
+                </div>
+                
+                <div class="challenge-select">
+                    <div class="challenge-card" data-challenge="time-attack">
+                        <div class="challenge-icon">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <h3>تحدي الوقت</h3>
+                        <p>أجب على أكبر عدد من مسائل جدول الضرب خلال دقيقة واحدة</p>
+                        <div class="difficulty">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card" data-challenge="target-number">
+                        <div class="challenge-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>العدد المستهدف</h3>
+                        <p>استخدم الضرب للوصول إلى العدد المستهدف باستخدام الأرقام المعطاة</p>
+                        <div class="difficulty">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card" data-challenge="falling-numbers">
+                        <div class="challenge-icon">
+                            <i class="fas fa-meteor"></i>
+                        </div>
+                        <h3>الأرقام المتساقطة</h3>
+                        <p>أوقف الأرقام المتساقطة باختيار الناتج الصحيح</p>
+                        <div class="difficulty">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    
+                    <div class="challenge-card" data-challenge="pattern-matching">
+                        <div class="challenge-icon">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <h3>أنماط الضرب</h3>
+                        <p>اكتشف أنماط الضرب وأكمل السلسلة المفقودة</p>
+                        <div class="difficulty">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="player-stats">
+                    <h3>إحصائياتك</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="stat-value" id="total-score">0</div>
+                            <div class="stat-label">النقاط الكلية</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-star"></i></div>
+                            <div class="stat-value" id="stars-earned">0</div>
+                            <div class="stat-label">النجوم المكتسبة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="stat-value" id="challenges-completed">0</div>
+                            <div class="stat-label">التحديات المكتملة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="stat-value" id="current-streak">0</div>
+                            <div class="stat-label">سلسلة الإجابات الصحيحة</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="challenge-screen" class="screen hidden">
+                <!-- Challenge specific content will be loaded here -->
+                <div id="challenge-container">
+                    <div id="challenge-header">
+                        <h3 id="challenge-title">عنوان التحدي</h3>
+                        <div id="challenge-controls">
+                            <button id="pause-btn" class="icon-btn"><i class="fas fa-pause"></i></button>
+                            <button id="back-btn" class="icon-btn"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div id="challenge-info">
+                        <div id="challenge-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <div id="progress-text">1/10</div>
+                        </div>
+                        <div id="challenge-timer" class="hidden">
+                            <i class="fas fa-clock"></i>
+                            <span id="timer-display">01:00</span>
+                        </div>
+                        <div id="challenge-score">
+                            <i class="fas fa-star"></i>
+                            <span id="current-score">0</span>
+                        </div>
+                    </div>
+                    
+                    <div id="sketch-container"></div>
+                    
+                    <div id="challenge-ui">
+                        <!-- Challenge-specific UI elements will be added here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div id="results-screen" class="screen hidden">
+                <h2>رائع! لقد أكملت التحدي</h2>
+                
+                <div class="results-container">
+                    <div id="results-animation"></div>
+                    
+                    <div class="results-stats">
+                        <div class="result-item">
+                            <div class="result-label">النقاط:</div>
+                            <div class="result-value" id="result-score">0</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">الوقت:</div>
+                            <div class="result-value" id="result-time">00:00</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-label">الإجابات الصحيحة:</div>
+                            <div class="result-value" id="result-correct">0/0</div>
+                        </div>
+                        <div class="result-item stars">
+                            <div class="result-label">النجوم:</div>
+                            <div class="result-stars">
+                                <span class="big-star" id="star1">★</span>
+                                <span class="big-star" id="star2">★</span>
+                                <span class="big-star" id="star3">★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="results-actions">
+                        <button id="retry-btn" class="result-btn"><i class="fas fa-redo"></i> إعادة المحاولة</button>
+                        <button id="next-challenge-btn" class="result-btn"><i class="fas fa-forward"></i> التحدي التالي</button>
+                        <button id="home-btn" class="result-btn"><i class="fas fa-home"></i> الرئيسية</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="pause-overlay" class="hidden">
+                <div class="pause-menu">
+                    <h3>إيقاف مؤقت</h3>
+                    <button id="resume-btn" class="pause-btn"><i class="fas fa-play"></i> استئناف</button>
+                    <button id="restart-btn" class="pause-btn"><i class="fas fa-redo"></i> إعادة بدء</button>
+                    <button id="exit-btn" class="pause-btn"><i class="fas fa-home"></i> خروج</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>تم إنشاؤه باستخدام <a href="#" target="_blank">سعيد الصلتي</a></p>
+    </footer>
+
+    <!-- Challenge system script -->
+    <script src="js/challenge-system.js"></script>
+    <!-- Individual challenge scripts -->
+    <script src="js/challenge-time-attack.js"></script>
+    <script src="js/challenge-target-number.js"></script>
+    <script src="js/challenge-falling-numbers.js"></script>
+    <script src="js/challenge-pattern-matching.js"></script>
+</body>
+</html>
