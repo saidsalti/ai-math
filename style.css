@@ -1,0 +1,160 @@
+/* Basic styling for the p5.js project */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #3498db;
+  color: white;
+  margin-bottom: 0;
+}
+
+nav {
+  width: 100%;
+  background-color: #2980b9;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #1c638d;
+}
+
+nav ul li a.active {
+  background-color: #1c638d;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+#sketch-container {
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 5px;
+}
+
+canvas {
+  display: block;
+}
+
+.controls {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.concept-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.concept-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.concept-card h3 {
+  color: #2980b9;
+  margin-top: 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.explanation {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  font-size: 0.9em;
+  background-color: #f2f2f2;
+}
+
+footer a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure RTL support works well */
+.rtl-container {
+  direction: rtl;
+  text-align: right;
+}

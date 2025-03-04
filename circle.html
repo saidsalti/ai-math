@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دائرة الوحدة والمثلثات - مفاهيم الرياضيات</title>
+    
+    <!-- P5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    
+    <!-- Your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>دائرة الوحدة والدوال المثلثية</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="circle.html" class="active">دائرة الوحدة والمثلثات</a></li>
+            <li><a href="parabola.html">المنحنى القطعي (الباربولا)</a></li>
+            <li><a href="fibonacci.html">متتالية فيبوناتشي</a></li>
+            <li><a href="pythagoras.html">نظرية فيثاغورس</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="content rtl-container">
+            <h2>استكشاف دائرة الوحدة والدوال المثلثية</h2>
+            
+            <div class="explanation">
+                <p>دائرة الوحدة هي دائرة نصف قطرها 1 وتمثل أساساً للدوال المثلثية. حرك المؤشر حول الدائرة لرؤية قيم الجيب وجيب التمام عند هذه النقطة.</p>
+                <p><strong>الجيب (sin θ):</strong> هو الإحداثي y للنقطة على دائرة الوحدة.</p>
+                <p><strong>جيب التمام (cos θ):</strong> هو الإحداثي x للنقطة على دائرة الوحدة.</p>
+            </div>
+            
+            <div id="sketch-container"></div>
+            
+            <div class="controls">
+                <p id="angle-value">الزاوية: 0 درجة</p>
+                <p id="sin-value">الجيب (sin): 0</p>
+                <p id="cos-value">جيب التمام (cos): 1</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>تم إنشاؤه باستخدام <a href="#" target="_blank">سعيد الصلتي</a></p>
+    </footer>
+
+    <!-- Circle concept specific script -->
+    <script src="js/circle.js"></script>
+</body>
+</html>

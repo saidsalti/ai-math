@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظرية فيثاغورس - مفاهيم الرياضيات</title>
+    
+    <!-- P5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    
+    <!-- Your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>نظرية فيثاغورس</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="circle.html">دائرة الوحدة والمثلثات</a></li>
+            <li><a href="parabola.html">المنحنى القطعي (الباربولا)</a></li>
+            <li><a href="fibonacci.html">متتالية فيبوناتشي</a></li>
+            <li><a href="pythagoras.html" class="active">نظرية فيثاغورس</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="content rtl-container">
+            <h2>استكشاف نظرية فيثاغورس</h2>
+            
+            <div class="explanation">
+                <p>نظرية فيثاغورس: في المثلث القائم الزاوية، مربع طول الوتر يساوي مجموع مربعي الضلعين الآخرين.</p>
+                <p>أي أن: a² + b² = c²</p>
+                <p>اسحب النقاط لتغيير شكل المثلث والحظ كيف تبقى المعادلة صحيحة دائماً في المثلث القائم.</p>
+            </div>
+            
+            <div id="sketch-container"></div>
+            
+            <div class="controls">
+                <p id="side-a">طول الضلع a: </p>
+                <p id="side-b">طول الضلع b: </p>
+                <p id="side-c">طول الوتر c: </p>
+                <p id="formula">a² + b² = c²</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>تم إنشاؤه باستخدام <a href="#" target="_blank">سعيد الصلتي</a></p>
+    </footer>
+    <!-- Pythagoras concept specific script -->
+    <script src="js/pythagoras.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنحنى القطعي (الباربولا) - مفاهيم الرياضيات</title>
+    
+    <!-- P5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    
+    <!-- Your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>المنحنى القطعي (الباربولا)</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="circle.html">دائرة الوحدة والمثلثات</a></li>
+            <li><a href="parabola.html" class="active">المنحنى القطعي (الباربولا)</a></li>
+            <li><a href="fibonacci.html">متتالية فيبوناتشي</a></li>
+            <li><a href="pythagoras.html">نظرية فيثاغورس</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="content rtl-container">
+            <h2>استكشاف المنحنى القطعي (الباربولا)</h2>
+            
+            <div class="explanation">
+                <p>الباربولا هو منحنى قطعي يمثل المعادلة y = ax² + bx + c. استخدم شريط التمرير أدناه لتغيير قيمة a وb وc ومشاهدة التأثير على شكل المنحنى.</p>
+                <p>المنحنى القطعي له العديد من الاستخدامات العملية في الفيزياء والهندسة، مثل مسار المقذوفات وتصميم العاكسات الضوئية.</p>
+            </div>
+            
+            <div id="sketch-container"></div>
+            
+            <div class="controls">
+                <label for="a-value">قيمة a:</label>
+                <input type="range" id="a-value" min="-2" max="2" step="0.1" value="1">
+                <span id="a-display">1</span>
+                <br>
+                <label for="b-value">قيمة b:</label>
+                <input type="range" id="b-value" min="-5" max="5" step="0.5" value="0">
+                <span id="b-display">0</span>
+                <br>
+                <label for="c-value">قيمة c:</label>
+                <input type="range" id="c-value" min="-5" max="5" step="0.5" value="0">
+                <span id="c-display">0</span>
+                <br>
+                <p id="equation">المعادلة: y = x²</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>تم إنشاؤه باستخدام <a href="#" target="_blank">سعيد الصلتي</a></p>
+    </footer>
+
+    <!-- Parabola concept specific script -->
+    <script src="js/parabola.js"></script>
+</body>
+</html>
